@@ -1,0 +1,22 @@
+BlueJ run started: Tue Feb 19 09:38:51 CET 2019
+BlueJ version 4.1.4
+Java version 1.8.0_192
+Virtual machine: Java HotSpot(TM) Client VM 25.192-b12 (Oracle Corporation)
+Running on: Windows 10 10.0 (x86)
+Java Home: C:\bluej\jdk\jre
+----
+Detected language "german" based on iso639-2 code "deu"
+Opening project: C:\Users\admin\HHGcloud\HHG1819\IF EF\EF06 KenntBeziehung\Ufospiel_Prototyp1
+1550565533905: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
+1550565875630: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
+1550565977000: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
+1550566013750: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
+Simple GUI Extension terminates

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Asteroid
+comment1.params=pTex
+comment1.target=Asteroid(GLOOP.GLTextur)
+comment2.params=
+comment2.target=void\ bewegeDich()
+comment3.params=
+comment3.target=void\ zuruecksetzen()
+numComments=4

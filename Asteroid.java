@@ -23,4 +23,8 @@ public class Asteroid{
         koerper.setzePosition(x,4000,z);
         koerper.setzeSkalierung(1,Math.random()+0.3,Math.random()+0.3);
     }
+    
+    
+    
+    //Comment
 }

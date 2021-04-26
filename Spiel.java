@@ -64,10 +64,10 @@ public class Spiel {
             if (tastatur.rechts() /*&& !(dasUfo.gibX() >= 500)*/){
                 dasUfo.bewegeRechts();
             }
-            if (tastatur.unten() /*&& !(dasUfo.gibY() >= -170)*/){
+            if (tastatur.unten() /*&& !(dasUfo.gibZ() >= -170)*/){
                 dasUfo.bewegeUnten();
             }
-            if (tastatur.oben() /*&& !(dasUfo.gibY() >= 270)*/){
+            if (tastatur.oben() /*&& !(dasUfo.gibZ() >= 270)*/){
                 dasUfo.bewegeOben();
             }
             

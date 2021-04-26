@@ -75,7 +75,7 @@ public class Spiel {
                 derAsteroid[i].bewegeDich();
             }            
 
-            Sys.warte();
+            Sys.warte(); //Test
         }
         Sys.beenden(); 
     }

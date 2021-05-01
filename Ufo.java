@@ -66,8 +66,13 @@ public class Ufo {
     
     public float gibY(){
         float Y = rumpf.gibY();
-        return(Y - 50);
+        return(Y);
     
     }
-
+    
+    public float gibZ(){
+        float Z = rumpf.gibZ();
+        return(Z);
+    
+    }
 }

@@ -1,6 +1,7 @@
 import GLOOP.*;
 public class Asteroid{
     private GLKugel koerper;
+    private Ufo dasUfo;
 
     public Asteroid(GLTextur pTex){
         int x = (int)(Math.random()*1000 - 500);
@@ -24,7 +25,18 @@ public class Asteroid{
         koerper.setzeSkalierung(1,Math.random()+0.3,Math.random()+0.3);
     }
     
+    public boolean kollision(){
+        boolean kollidiert = false;
+        double dy = dasUfo.gibY() - koerper.gibY();
+        double dx = dasUfo.gibX() - koerper.gibX();
+        double dz = dasUfo.gibZ() - koerper.gibZ();
+        double distanz =  Math.sqrt(dx*dx+dy*dy+dz*dz);
+        if (distanz < 50){
+        kollidiert = true;
+       }
+       return kollidiert;
+    } 
     
     
-    //Comment
+   
 }

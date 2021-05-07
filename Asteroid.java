@@ -27,14 +27,15 @@ public class Asteroid{
     
     public boolean kollision(){
         boolean kollidiert = false;
-        double dy = dasUfo.gibY() - koerper.gibY();
-        double dx = dasUfo.gibX() - koerper.gibX();
-        double dz = dasUfo.gibZ() - koerper.gibZ();
-        double distanz =  Math.sqrt(dx*dx+dy*dy+dz*dz);
-        if (distanz < 50){
-        kollidiert = true;
-       }
-       return kollidiert;
+        // double dy = dasUfo.gibY() - koerper.gibY();
+        // double dx = dasUfo.gibX() - koerper.gibX();
+        // double dz = dasUfo.gibZ() - koerper.gibZ();
+        // double distanz =  Math.sqrt(dx*dx+dy*dy+dz*dz);
+        if (51 < 50) return true;
+       
+       else return false;
+        
+       
     } 
     
     

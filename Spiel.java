@@ -11,12 +11,12 @@ public class Spiel {
 
     private Ufo dasUfo;
     private Asteroid[] derAsteroid;
-    
+
     // Das Spiel verfügt über die folgenden Variablen, um sich Zustände zu merken:
     // Attribute
     private int alteMausX;
     private int alteMausY;
-    
+
     // Konstruktor (Wird aufgerufen, wenn das Spiel gestartet/erzeugt wird.)
     public Spiel() {
         // zunächst werden alle verwendeten Objekte erzeugt
@@ -31,16 +31,16 @@ public class Spiel {
 
         tastatur = new GLTastatur();
         maus = new GLMaus();
-        
+
         eineTafel = new GLTafel(0,100,200,10,10);
         eineTafel.setzeAutodrehung(true);  // die Tafel dreht sich automatisch zum Beobachter
 
         GLTextur textur = new GLTextur("tMeteorit1.jpg");
-        
+
         derAsteroid = new Asteroid[10];
-        for (int i = 0; i < 10; i++) {
-                derAsteroid[i] = new Asteroid(textur);
-            }            
+        for (int i = 0; i < 9; i++) {
+            derAsteroid[i] = new Asteroid(textur);
+        }            
         dasUfo = new Ufo();
 
         fuehreAus();       // starten der Methode fuehreAus
@@ -50,14 +50,14 @@ public class Spiel {
         // Vorbereitung des Spiels
         eineTafel.setzeText("Bewege die Maus auf das Ufo. Klicken. Taste drücken.", 20);
         eineTafel.setzeSichtbarkeit(true);   // Tafel einblenden
-        
+
         while(!tastatur.istGedrueckt()) { }  // warten bis Taste gedrückt
-        
-        
+
         eineTafel.setzeSichtbarkeit(false);   // Tafel ausblenden
-        
         // das Spiel beginnt
         while(!tastatur.esc()) {
+            for (int i = 0; i < 10; i++) {
+                while (derAsteroid[i].kollision() != true){
             if (tastatur.links() /*&& !(dasUfo.gibX() >= -500)*/){
                 dasUfo.bewegeLinks();
             }
@@ -71,12 +71,18 @@ public class Spiel {
                 dasUfo.bewegeOben();
             }
             
-            for (int i = 0; i < 10; i++) {
+                
+                
+            
+            for (i = 0; i < 10; i++) {
                 derAsteroid[i].bewegeDich();
             }            
 
             Sys.warte();
         }
+    }
+    Sys.beenden();
+}
         Sys.beenden(); 
     }
 }

@@ -25,12 +25,19 @@ public class Ufo {
         fluegel2.setzeFarbe(0,0,1);        
     }
 
+    public void reset(){
+        rumpf.setzePosition(0,0,0);
+        fluegel1.setzePosition(-60,-10,0);
+        fluegel2.setzePosition(60,-10,0);
+        cockpit.setzePosition(0,0,0);
+    }
     
     public void bewegeLinks(){
             rumpf.verschiebe(-5,0,0);
             cockpit.verschiebe(-5,0,0);
             fluegel1.verschiebe(-5,0,0);
             fluegel2.verschiebe(-5,0,0);
+               
             Sys.warte();
     }
 

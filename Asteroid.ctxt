@@ -2,10 +2,12 @@
 comment0.target=Asteroid
 comment1.params=pTex
 comment1.target=Asteroid(GLOOP.GLTextur)
-comment2.params=
-comment2.target=void\ bewegeDich()
+comment2.params=speed
+comment2.target=void\ bewegeDich(int)
 comment3.params=
 comment3.target=void\ zuruecksetzen()
 comment4.params=
 comment4.target=boolean\ kollision()
-numComments=5
+comment5.params=neuesUfo
+comment5.target=void\ setzeUfo(Ufo)
+numComments=6

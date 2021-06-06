@@ -37,6 +37,20 @@ public class Asteroid{
        return kollidiert;
     } 
     
+    public boolean laser_hit(){
+        boolean lkollidiert = false;
+        double dy = dasUfo.gibY() - koerper.gibY();
+        double dx = dasUfo.gibX() - koerper.gibX();
+        double dz = 0;
+        double distanz =  Math.sqrt(dx*dx+dy*dy+dz*dz);
+        if (distanz < 100){
+        lkollidiert = true;
+       }
+       System.out.println(distanz);
+       return lkollidiert;
+       
+    }
+    
     public void setzeUfo(Ufo neuesUfo){
         dasUfo = neuesUfo;
     

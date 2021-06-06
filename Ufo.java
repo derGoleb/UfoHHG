@@ -3,6 +3,7 @@ public class Ufo {
     private GLTorus rumpf;
     private GLKugel cockpit;
     private GLKegel fluegel1, fluegel2;
+    public GLZylinder laser;
 
     public Ufo(){
         rumpf = new GLTorus(0,0,0,50,20);
@@ -22,7 +23,13 @@ public class Ufo {
         fluegel2.skaliere(0.2,1,1);        
         fluegel2.drehe(0,-90,0, 60,10,0);
         fluegel2.drehe(0,0,-45, 0,0,0);
-        fluegel2.setzeFarbe(0,0,1);        
+        fluegel2.setzeFarbe(0,0,1);      
+        
+        laser = new GLZylinder(0,0,-1500,3, 3000);
+        laser.drehe(90,0,0, 0,0,0);
+        laser.setzeFarbe(1,0.1,0);
+        laser.setzeSelbstleuchten(1,0.1,0);
+        laser.setzeSichtbarkeit(false);
     }
 
     public void reset(){
@@ -37,7 +44,8 @@ public class Ufo {
             cockpit.verschiebe(-5,0,0);
             fluegel1.verschiebe(-5,0,0);
             fluegel2.verschiebe(-5,0,0);
-               
+            laser.verschiebe(-5,0,0);
+            
             Sys.warte();
     }
 
@@ -46,6 +54,7 @@ public class Ufo {
         cockpit.verschiebe(5,0,0);
         fluegel1.verschiebe(5,0,0);
         fluegel2.verschiebe(5,0,0);
+        laser.verschiebe(5,0,0);
         Sys.warte();
     } 
     
@@ -54,6 +63,7 @@ public class Ufo {
         cockpit.verschiebe(0,0,-5);
         fluegel1.verschiebe(0,0,-5);
         fluegel2.verschiebe(0,0,-5);
+        laser.verschiebe(0,0,-5);
         Sys.warte();
     }
 
@@ -62,6 +72,7 @@ public class Ufo {
         cockpit.verschiebe(0,0,5);
         fluegel1.verschiebe(0,0,5);
         fluegel2.verschiebe(0,0,5);
+        laser.verschiebe(0,0,5);
         Sys.warte();    
     } 
     
@@ -80,6 +91,11 @@ public class Ufo {
     public float gibZ(){
         float Z = rumpf.gibZ();
         return(Z);
+    
+    }
+    
+    public void destroy_animation() {
+    
     
     }
 }
